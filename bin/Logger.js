@@ -11,7 +11,7 @@ const logger = winston.createLogger({
     new transports.File({ filename: './log/error.log',json: true ,timestamp:true,maxFiles: 10, maxsize: 1000000,tailable: true}) 
   ],
   exceptionHandlers: [
-    new transports.File({ filename: './log/exceptions.log',json: true ,timestamp:true,maxFiles: 10, maxsize: 1000000,tailable: true })
+    new transports.File({ filename: './log/exceptions.log',json: true ,timestamp:true,maxFiles: 10, maxsize: 1000000,tailable: true,json: false })
   ],
   uncaughtException :[
        new transports.File({ filename: './log/combined.log',json: true ,timestamp:true,maxFiles: 10, maxsize: 1000000,tailable: true})

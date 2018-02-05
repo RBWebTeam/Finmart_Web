@@ -1,0 +1,96 @@
+extends layout
+
+block content
+        .container
+            |     
+            title ONE STOP FINANCIAL SOLUTION
+            |     
+            meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+            |     
+            link(href='css/bootstrap.min.css', rel='stylesheet', type='text/css')
+            |     
+            |     
+            link(href='css/font-awesome.min.css', rel='stylesheet', type='text/css')
+            | &#x9;
+            link(href='css/style-finmart.css', rel='stylesheet', type='text/css')
+            | &#x9;
+            link(href='css/responsive-finmart.css', rel='stylesheet', type='text/css')
+            | &#x9;
+            link(href='css/fonts.css', rel='stylesheet', type='text/css')
+            // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+            // WARNING: Respond.js doesn't work if you view the page via file://
+            //if lt IE 9
+              script(src='js/html5shiv.js')
+              |         
+              script(src='js/respond.min.js')
+
+        .container.pad-1
+          .wrapper-login
+            .main-login
+              .text-center
+                .clearfix.main-login-new
+                | &#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                img.img-responsive(src='images/main-screen-logo.png')
+              | &#x9;&#x9;&#x9;
+              | &#x9;&#x9;&#x9;&#x9;
+              .col-xs-12.text-center.top-type-info.main-login
+                p ONE STOP FINANCIAL SOLUTION
+              | &#x9;&#x9;&#x9;&#x9;
+              | &#x9;&#x9;&#x9;&#x9;
+              form(id='login_form')
+                .form-group.col-xs-12.pad
+                  .main-login-pad.col-xs-12.text-center
+                    .form-control.height-box
+                      input.form-input-new-login.username(type='email',name='email', required)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      span.highlight
+                      span.bar
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      label.form-label-email Email
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-xs-12.text-center
+                    .form-control.height-box
+                      img#eye.login-field-icon-1(src='images/login-eye.png')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      input.form-input-new-login.password(type='password',name='pwd',required)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      span.highlight
+                      span.bar
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      label.form-label-email Password
+                | &#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .clearfix
+                
+                a| &#x9;&#x9;&#x9;&#x9;&#x9;
+                .col-xs-12.submit-login-pad-top
+                  .login-button.ripple-effect#login_button
+                    | SIGN IN
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .col-xs-12
+                  .col-xs-7.pad.text-left
+                    h5
+                      | Not a member?
+                      a(href='#', style='color:#009ee3;')  Sign up now!
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-xs-5.pad.text-right
+                    h5
+                      a(href='#') Forgot Password?
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .clearfix
+                | &#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .text-center
+                  h3 Sign in with
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  img.img-responsive(src='images/google-sign-icon.png')
+        | &#x9;
+        | &#x9;&#x9;
+        | &#x9;&#x9;
+
+

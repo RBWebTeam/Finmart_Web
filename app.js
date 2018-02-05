@@ -10,6 +10,11 @@ var api = require('./routes/api');
 var app = express();
 var base=require('./controller/baseController');
 var logger=require('./bin/Logger');
+var expressSession = require('express-session');
+app.use(expressSession({
+  secret: 'your secret',
+  saveUninitialized: true,
+  resave: false}));
 // view engine setup
 // var phpExpress = require('php-express')({
 //   binPath: 'php'
