@@ -1,9 +1,9 @@
 {
-  "name": "backofficenode",
+  "name": "Finmart_Web",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node bin\/www"
   },
   "dependencies": {
     "bladejs": "^1.0.3",
@@ -25,5 +25,6 @@
     "soap": "^0.23.0",
     "winston": "^3.0.0-rc1",
     "xml2js": "^0.4.19"
-  }
+  },
+  "display":"standalone",
 }

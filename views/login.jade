@@ -42,7 +42,7 @@ block content
                 .form-group.col-xs-12.pad
                   .main-login-pad.col-xs-12.text-center
                     .form-control.height-box
-                      input.form-input-new-login.username(type='email',name='email', required)
+                      input.form-input-new-login.username(type='email',name='UserName', required)
                       | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.highlight
                       span.bar
@@ -54,7 +54,7 @@ block content
                     .form-control.height-box
                       img#eye.login-field-icon-1(src='images/login-eye.png')
                       | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                      input.form-input-new-login.password(type='password',name='pwd',required)
+                      input.form-input-new-login.password(type='password',name='Password',required)
                       | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       span.highlight
                       span.bar
@@ -70,6 +70,8 @@ block content
                     | SIGN IN
                 | &#x9;&#x9;&#x9;&#x9;&#x9;
                 | &#x9;&#x9;&#x9;&#x9;&#x9;
+                
+                input#file-input.glyphicon.glyphicon-camera(type='file', accept='image/*', capture='')
                 .col-xs-12
                   .col-xs-7.pad.text-left
                     h5

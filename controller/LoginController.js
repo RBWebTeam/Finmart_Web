@@ -2,8 +2,9 @@ var con=require('../bin/dbconnection.js');
 var base=require('./baseController');
 var wrapper = require('./wrapper.js');
 
+class Login{};
 
-var login = function(req, res, next) {
+Login.login_process = function(req, res, next) {
 
 // console.log(res.body);
 var loginparameter = [];
@@ -20,15 +21,25 @@ con.execute_proc('call spValidateLogin(?,?,?,?,?)',loginparameter,function(data)
 	if(data[0][0].SuccessStatus == "1"){
 		data[0][0].POSPInfo = data[0][0].POSPName + "~" + data[0][0].POSPMobile + "~" + data[0][0].POSEmail;
         data[0][0].FSM = data[0][0].FSMFullname + "~" + data[0][0].FSMEmail + "~" + data[0][0].FSMMobile + "~" + data[0][0].FSMDesig;
-		base.send_response("Success", data[0][0],res);
+		next(data);
 	}
 	else{
-			base.send_response("Failure", "",res);				
+	       next(null);
 	}
 });
-
+    
+};
+Login.login=(req,res,next)=>{
+    login_process(req,res,function(data){
+        if(data){
+            base.send_response("Success", data[0][0],res);
+        }else{
+            base.send_response("Failure", "",res);
+        }
+    });
+    //next();
 };
 
 
 
-module.exports = login;
+module.exports = Login;

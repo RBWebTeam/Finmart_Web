@@ -7,5 +7,19 @@
 var gulp = require('gulp');
 
 gulp.task('default', function () {
-    // place code for your default task here
+
+    gulp.src([
+            'public/css/**/*.css'
+        ])
+        .pipe(sassPlugin())
+        .pipe(gulp.dest('public/css'));
+
+    gulp.src([
+            'public/modules/**/*.css'
+        ])
+        .pipe(sassPlugin())
+        .pipe(rename(function(path) {
+            path.dirname = path.dirname.replace('sass', 'styles');
+        }))
+        .pipe(gulp.dest('public/modules/'));
 });

@@ -12,7 +12,7 @@ var base=require('./controller/baseController');
 var logger=require('./bin/Logger');
 var expressSession = require('express-session');
 app.use(expressSession({
-  secret: 'your secret',
+  secret: 'Chaos is a ladder',
   saveUninitialized: true,
   resave: false}));
 // view engine setup
